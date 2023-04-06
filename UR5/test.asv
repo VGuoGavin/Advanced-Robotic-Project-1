@@ -18,7 +18,12 @@ for p1 = 0 :-10:-95
             hold on;
             num = num+1;
         end
-        mid_point(100, p2, p3, 100, 0, 90);
+        mid_point_x = 70;
+        mid_point_y = (p2-2)/2;
+        mid_point_z = (p3+90)/2;
+        for 
+
+
 
     end
 end

@@ -35,6 +35,10 @@ end
 
 %************* draw
 % side faces
+% disp(2+pos(1))
+% disp(y2+pos(2))
+% disp(2+pos(3))
+% disp(cc)
 h = surf(x2+pos(1),y2+pos(2),z2+pos(3),cc);
 
 for n=1:2

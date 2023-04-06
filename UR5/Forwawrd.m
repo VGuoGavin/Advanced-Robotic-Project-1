@@ -19,7 +19,6 @@ function T = Forwawrd(theta)
     T56=T_para(theta(6),d(6),a(6),alpha(6));
     
     T=T01*T12*T23*T34*T45*T56;
-    disp(T)
     
 end
  

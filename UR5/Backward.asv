@@ -47,7 +47,7 @@ function theta=niyundongxue(T)
         ((a(2))^2+(a(3))^2+2*a(2)*a(3)*cos(theta3));
     c2=(mmm_s2+a(3)*sin(theta3).*s2)./(a(3)*cos(theta3)+a(2));
 
-    theta2=atan2(real(s2), real(c2));   
+    theta2=(real(s2), real(c2));   
     
     %整理关节角1 5 6 3 2
     theta(1:4,1)=theta1(1,1);theta(5:8,1)=theta1(1,2);
