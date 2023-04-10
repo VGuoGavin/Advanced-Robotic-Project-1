@@ -1,7 +1,7 @@
 function [R] = Rotation(r, ax)
 
-    R = vpa(eye(4));
-    rot = vpa([cos(r),-sin(r);sin(r),cos(r)]);
+    R = (eye(4));
+    rot = ([cos(r),-sin(r);sin(r),cos(r)]);
 
     if (ax == 'x')
         R(2:3,2:3) = rot;

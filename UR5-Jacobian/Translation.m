@@ -1,6 +1,6 @@
 function [T] = Translation(d, ax)
 
-    T = vpa(eye(4));
+    T = (eye(4));
 
     if (ax == 'x')
         T(1,4) =+ d;

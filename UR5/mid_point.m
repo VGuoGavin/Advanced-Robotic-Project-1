@@ -20,6 +20,6 @@ function res = mid_point(x_last, y_last, z_last, x_next, y_next, z_next)
         for i = 1: num
             Locus(X_path(i), Y_path(i), Z_path(i), 1);
         end
-        hold on;
+        res = [x_next, y_next, z_next];
 
 end

@@ -2,26 +2,33 @@ function res = Draw_UR5(th1, th2, th3,th4,th5,th6, fcla )
 
 global Link
 
+global X_g;
+global Y_g;
+global Z_g;
+
+global X2_g;
+global Y2_g;
+global Z2_g;
+
 ToDeg = 180/pi;
 ToRad = pi/180;
 UX = [1 0 0]';
 UY = [0 1 0]';
 UZ = [0 0 1]';
+
 %Link= struct('name','Body' , 'th'角度,  0, 'dz'z轴方向距离, 0,  'dy'y轴方向距离, 0, 'dx'x轴方向距离, 0, 'alf',90*ToRad,'az',UZ);  
-Link= struct('name','Body' , 'th',  0, 'dz', 0,  'dy', 0, 'dx', 0, 'alf',0*ToRad,'az',UZ);     % az 
-Link(1)= struct('name','Base' , 'th',  0, 'dz', 0, 'dy', 0,'dx', 0, 'alf',0*ToRad,'az',UZ);        %Base To 1
-Link(2) = struct('name','J1' , 'th',   0*ToRad, 'dz', 90/5,     'dy', 0,    'dx',  0,      'alf',90*ToRad,  'az',UZ);    %1 TO 2
-Link(3) = struct('name','J2' , 'th',  0*ToRad, 'dz', 0,         'dy', 0,    'dx',  -425/5, 'alf',0*ToRad,  'az',UZ);    %2 TO 3
-Link(4) = struct('name','J3' , 'th',  0*ToRad, 'dz', 0,         'dy', 0,    'dx',  -392/5, 'alf',0*ToRad,  'az',UZ);    %3 TO E
-Link(5) = struct('name','J4' , 'th',  0*ToRad, 'dz', 110/5,     'dy', 0,    'dx',  0,      'alf',90*ToRad, 'az',UZ);    %4 TO 3
+Link= struct('name','Body' , 'th',  0,         'dz', 0,         'dy', 0,    'dx', 0,        'alf',0*ToRad,  'az',UZ);     % az 
+Link(1)= struct('name','Base' , 'th',  0,      'dz', 0,         'dy', 0,    'dx', 0,        'alf',0*ToRad,  'az',UZ);        %Base To 1
+Link(2) = struct('name','J1' , 'th',  0*ToRad, 'dz', 89.2/5,      'dy', 0,    'dx',  0,      'alf',90*ToRad,  'az',UZ);    %1 TO 2
+Link(3) = struct('name','J2' , 'th',  0*ToRad, 'dz', 0,         'dy', 0,    'dx',  425/5,  'alf',0*ToRad,  'az',UZ);    %2 TO 3
+Link(4) = struct('name','J3' , 'th',  0*ToRad, 'dz', 0,         'dy', 0,    'dx',  392/5,  'alf',0*ToRad,  'az',UZ);    %3 TO E
+Link(5) = struct('name','J4' , 'th',  0*ToRad, 'dz', 109/5,     'dy', 0,    'dx',  0,      'alf',90*ToRad, 'az',UZ);    %4 TO 3
 Link(6) = struct('name','J5' , 'th',  0*ToRad, 'dz', 95/5,      'dy', 0,    'dx',  0,      'alf',-90*ToRad,'az',UZ);    %5 TO E
-Link(7) = struct('name','J6' , 'th',  0*ToRad, 'dz',  82/5,     'dy', 0,    'dx',  0,      'alf',0*ToRad,  'az',UZ);    %6 TO E
+Link(7) = struct('name','J6' , 'th',  0*ToRad, 'dz',  82.5/5,     'dy', 0,    'dx',  0,      'alf',0*ToRad,  'az',UZ);    %6 TO E
 
 radius = 10;
 len = 20;
 joint_col = 0;
-
-plot3(0,0,0,'ro');  %Draw the orginal position [0,0,0]
 
 Link(2).th=th1;
 Link(3).th=th2;
@@ -70,7 +77,10 @@ if(fcla)
  cla;
 end
 
-
+% plot3(X_g, Y_g, Z_g, 'r.');
+% hold on;
+plot3(X2_g, Y2_g, Z2_g, 'r.');
+hold on;
 
 
 
