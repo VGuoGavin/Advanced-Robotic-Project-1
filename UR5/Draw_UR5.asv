@@ -15,8 +15,8 @@ UY = [0 1 0]';
 UZ = [0 0 1]';
 %% To design the UI 
 %Link= struct('name','Body' , 'th' theta,  0, 'dz'z distance, 0,  'dy'y distance, 0, 'dx'x distance , 0, 'alf',90*ToRad,'az',UZ);  
-Link = struct('name','Body' , 'th',  0,         'dz', 0,         'dy', 0,    'dx', 0,        'alf',0*ToRad,  'az',UZ);     % az 
-Link(1) = struct('name','Base' , 'th',  0,      'dz', 0,         'dy', 0,    'dx', 0,        'alf',0*ToRad,  'az',UZ);        %Base To 1
+Link= struct('name','Body' , 'th',  0,         'dz', 0,         'dy', 0,    'dx', 0,        'alf',0*ToRad,  'az',UZ);     % az 
+Link(1)= struct('name','Base' , 'th',  0,      'dz', 0,         'dy', 0,    'dx', 0,        'alf',0*ToRad,  'az',UZ);        %Base To 1
 Link(2) = struct('name','J1' , 'th',  0*ToRad, 'dz', 89.2/5,      'dy', 0,    'dx',  0,      'alf',90*ToRad,  'az',UZ);    %1 TO 2
 Link(3) = struct('name','J2' , 'th',  0*ToRad, 'dz', 0,         'dy', 0,    'dx',  425/5,  'alf',0*ToRad,  'az',UZ);    %2 TO 3
 Link(4) = struct('name','J3' , 'th',  0*ToRad, 'dz', 0,         'dy', 0,    'dx',  392/5,  'alf',0*ToRad,  'az',UZ);    %3 TO E
@@ -55,13 +55,12 @@ for i=3:7
 %     disp(Link(i).A);
 end
 % canvas
-
-% [X,Y,Z] = meshgrid(-100:100:100);   
-% V = X.*exp(-X.^2-Y.^2-Z.^2);
-% xslice = 100;   
-% yslice = [];
-% zslice = [];
-% slice(X,Y,Z,V,xslice,yslice,zslice,'nearest')
+[X,Y,Z] = meshgrid(-100:100:100);   
+V = X.*exp(-X.^2-Y.^2-Z.^2);
+xslice = 100;   
+yslice = [];
+zslice = [];
+slice(X,Y,Z,V,xslice,yslice,zslice,'nearest')
 
 grid on;
 % view(134,12);
