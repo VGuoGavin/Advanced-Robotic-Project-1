@@ -1,5 +1,4 @@
-
-function h = DrawCylinder(pos, az, radius,len, col)     
+function h = DrawCylinder(pos, az, radius,len, col)        %这是个画圆筒（关节）的函数
 % draw closed cylinder  
 %
 %******** rotation matrix

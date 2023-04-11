@@ -30,7 +30,6 @@ for i=1:1:27
             plot3(point1,point2,point3,'r*');hold on;   %这里用了point1,point2,point3，而不用 point1(num)，point2(num), point3(num)?  
             
             fprintf('point1=%4.2f \n',point1(num));     %观察输出点的情况
-            
             fprintf('point2=%4.2f \n',point2(num));
             fprintf('point3=%4.2f \n',point3(num));
             
