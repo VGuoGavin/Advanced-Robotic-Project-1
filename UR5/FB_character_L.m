@@ -14,7 +14,7 @@ p_end = FB_current_2_next(current_p,next_p,speed, 1);  % The first line |
 
 current_p = p_end;
 next_p = [100;  -78; 7];
-p_end = FB_current_2_next(current_p,next_p,speed, 1);
+p_end = FB_current_2_next(current_p,next_p,speed, 0.9);
 
-FB_character_O(p_end, area_num, 1)
+FB_character_O(p_end, area_num, 1.4)
 end

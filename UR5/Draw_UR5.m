@@ -7,6 +7,10 @@ global Z_g;
 global X2_g; % Forwards and Backwards method
 global Y2_g;
 global Z2_g;
+global F_time
+global L_time
+global O_time
+global W_time
 
 ToDeg = 180/pi;
 ToRad = pi/180;
@@ -56,12 +60,12 @@ for i=3:7
 end
 % canvas
 
-% [X,Y,Z] = meshgrid(-100:100:100);   
-% V = X.*exp(-X.^2-Y.^2-Z.^2);
-% xslice = 100;   
-% yslice = [];
-% zslice = [];
-% slice(X,Y,Z,V,xslice,yslice,zslice,'nearest')
+[X,Y,Z] = meshgrid(-100:100:100);   
+V = X.*exp(-X.^2-Y.^2-Z.^2);
+xslice = 100;   
+yslice = [];
+zslice = [];
+slice(X,Y,Z,V,xslice,yslice,zslice,'nearest')
 
 grid on;
 % view(134,12);
@@ -70,15 +74,30 @@ xlabel('x');
 ylabel('y');
 zlabel('z');
 drawnow;
-pic=getframe;
+pic = getframe;
 if(fcla)
     cla;
 end
 
-plot3(X_g, Y_g, Z_g, 'r.');
+text(80,100,115,"Avg speed = 0.08");
+text(80,100,100,string(F_time));
+
+text(80,-100,115,"Avg speed = 0.07");
+text(80,-100,100,string(L_time));
+
+text(80,100,-115,"Avg speed = 0.08");
+text(80,100,-100,string(O_time));
+
+text(80,-100,-115,"Avg speed = 0.138");
+text(80,-100,-100,string(W_time));
 hold on;
-%plot3(X2_g, Y2_g, Z2_g, 'r.');
-%hold on;
+
+%Jacobian  writing
+%plot3(X_g, Y_g, Z_g, 'r.');    
+%Forwards and Backwards writing
+plot3(X2_g, Y2_g, Z2_g, 'r.');
+
+hold on;
 
 
 
