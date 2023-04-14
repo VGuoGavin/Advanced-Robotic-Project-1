@@ -3,16 +3,16 @@ UR5
 1.Jacobian-inverse method simulation
 2. Forwards and Backwards simulation
 Code structure
-——————————————————————————————————
+————————————————————————————————————————————————------
 Main.m 			   | Codes entrance including 2 methods
-——————————————————————————————————
+————————————————————————————————————————————————------
 - Backwards.m             | Calculate the Backwards matrix
 - Forwards.m                | Calculate the forwards matrix
 - Jacobian_calculation  | Calculate the Jacobian matrix
 - Matrix_DH_Ln.m.        | Based on DH parameters calculate forwards matrix
 - Rotation.m                  | Calculate the rotation matrix
 -Translation.m.              | Calculate the translation matrix
-——————————————————————————————————
+————————————————————————————————————————————————------
 Jacobian methed writing related functions.
 - Jacobian_trajectory.m  | Calculate the inverse of Jacobian and the next position
 - Character_F.m.            | Writing “F” packaged function
@@ -21,7 +21,7 @@ Jacobian methed writing related functions.
 - Character_W.m.           | Writing “W” packaged function
 - current_2_next.m.        | End of manipulator  from one position to next one
 - Move_2_ara.m.            | End of manipulator move to quadrant 1-4
-——————————————————————————————————
+————————————————————————————————————————————————------
 Forwards and Backwards methods
 - Locus.m.                        | Locus the position torque by giving the target x,y,z
 - FB_Character_F.m.       | Writing “F” packaged function
@@ -31,12 +31,12 @@ Forwards and Backwards methods
 - FB_current_2_next.m.   | End of manipulator  from one position to next one
 - FB_Move_2_ara.m.       | End of manipulator move to quadrant 1-4
 - mid_point.m                   | Used to calculate the centre point between two positions
-——————————————————————————————————
+——————————————————————————————————------——————————————------
 UI design related functions
 DrawCylinder.m               | Draw the joint function
 Connect3D.m                  | Draw the links function
 Draw_UR5.m.                 | Combine the UI with draw function parameters to draw UR5
-——————————————————————————————————
+——————————————————————————————————-----------------------------------
 No need to install any other toolbox. Directly run the main.m function.
 ! !! Please pay attention that, only one trajectory can be shown in one time. Which means several lines codes In Draw_UR5.m located at bottom should be valid or invalid based on which method is running. The Jacobian method is default.
 
