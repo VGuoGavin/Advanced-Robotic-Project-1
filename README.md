@@ -38,6 +38,10 @@ Draw_UR5.m.                 | Combine the UI with draw function parameters to dr
 
 No need to install any other toolbox. Directly run the main.m function.
 ! !! Please pay attention that, only one trajectory can be shown in one time. Which means several lines codes In Draw_UR5.m located at bottom should be valid or invalid based on which method is running. The Jacobian method is default.
+Result:
+<img width="937" alt="Screenshot 2023-10-06 at 3 17 23 PM" src="https://github.com/VGuoGavin/Advanced-Robotic-Project-1/assets/53364849/ffb52ddc-fea8-4e4b-857f-e0fca9c27243">
+
+![Uploading Screenshot 2023-10-06 at 3.16.58 PM.png…]()
 
 
 Other resources:
